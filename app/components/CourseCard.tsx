@@ -1,4 +1,4 @@
-import { FaCertificate, FaClock, FaStar } from 'react-icons/fa';
+import { FaCertificate, FaClock } from 'react-icons/fa';
 import styles from './CourseCard.module.css';
 import Image from 'next/image';
 

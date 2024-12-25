@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { FaCalendarAlt, FaMapMarkerAlt, FaBriefcase } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './ExperienceCard.module.css';
 
 interface ExperienceCardProps {

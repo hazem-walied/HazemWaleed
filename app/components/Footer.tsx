@@ -1,6 +1,6 @@
 "use client"
 
-// components/Footer.tsx
+
 import { useRef, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './Footer.module.css';
@@ -18,7 +18,7 @@ const Footer = () => {
                     'service_jwdf3iq',
                     'template_d1jcygh',
                     formRef.current,
-                    'pGpcvw0jdGI1gLCao' // Replace with your EmailJS public key
+                    'pGpcvw0jdGI1gLCao' 
                 );
 
                 console.log('SUCCESS!', result.text);

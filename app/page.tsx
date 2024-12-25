@@ -79,7 +79,7 @@ export default function Home() {
                         </motion.div>
 
                         <h1 className={styles.title}>
-                            Hi, I'm <span className={styles.name}>Hazem Waleed</span>
+                            Hi, I&apos;m <span className={styles.name}>Hazem Waleed</span>
                         </h1>
                         
                         <div className={styles.typewriterContainer}>
