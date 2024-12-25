@@ -1,0 +1,130 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #050507, #0a0a12);
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gradientOrb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, rgba(96, 165, 250, 0) 70%);
+    top: -200px;
+    right: -200px;
+    filter: blur(50px);
+}
+
+.gradientOrb2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0) 70%);
+    bottom: -200px;
+    left: -200px;
+    filter: blur(50px);
+}
+
+.main {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+}
+
+.headerContainer {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeIn 1s ease-out;
+}
+
+.header {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.headerAccent {
+    display: block;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.subheader {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.timelineLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(59, 130, 246, 0),
+        rgba(59, 130, 246, 0.5) 10%,
+        rgba(59, 130, 246, 0.5) 90%,
+        rgba(59, 130, 246, 0)
+    );
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Add floating animation to cards */
+.card {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: calc(var(--index) * 0.2s);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Update media queries */
+@media (max-width: 768px) {
+    .timeline {
+        margin: 0 20px;
+        padding-left: 20px;
+    }
+
+    .timelineLine {
+        left: 0;
+    }
+
+    .card::before {
+        left: -50px !important;
+    }
+
+    .card::after {
+        left: -30px !important;
+        width: 30px;
+    }
+}

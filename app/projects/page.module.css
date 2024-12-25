@@ -1,0 +1,129 @@
+/* app/projects/page.module.css */
+.container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #050507, #0a0a12);
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gradientOrb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, rgba(96, 165, 250, 0) 70%);
+    top: -200px;
+    right: -200px;
+    filter: blur(50px);
+}
+
+.gradientOrb2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0) 70%);
+    bottom: -200px;
+    left: -200px;
+    filter: blur(50px);
+}
+
+.main {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+}
+
+.headerContainer {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeIn 1s ease-out;
+}
+
+.header {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.headerAccent {
+    display: block;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.subheader {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+    animation: gridFadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gridFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .projectsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 2.5rem;
+    }
+    
+    .headerAccent {
+        font-size: 1.5rem;
+    }
+    
+    .subheader {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .projectsGrid {
+        grid-template-columns: 1fr;
+    }
+}
