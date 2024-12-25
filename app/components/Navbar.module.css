@@ -24,7 +24,7 @@
 }
 
 .title h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin: 0;
     background: linear-gradient(45deg, #ffffff, #e2e8f0);
@@ -57,7 +57,7 @@
 .nav li a {
     color: #e2e8f0;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 8px;
