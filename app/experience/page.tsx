@@ -10,7 +10,7 @@ const experiences = [
         role: "Technical Solutions Associate",
         startDate: "July 2024",
         endDate: "September 2024",
-        location: "Remote, Kitchener|ON|Canada",
+        location: "Remote, Kitchener | ON | Canada",
         description: [
             "Medical Company for Data Driven Patient Recovery Utilising AI",
         ],

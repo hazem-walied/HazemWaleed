@@ -74,13 +74,17 @@
 
 
 .skillsContainer {
-    perspective: 1000px;
+    display: flex;
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center; /* Centers vertically if needed */
+    width: 100%;
 }
+
 
 .skillsGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 60px;
     padding: 20px;
     animation: gridFadeIn 1s ease-out;
 }
@@ -136,6 +140,7 @@
 @media (max-width: 600px) {
     .skillsGrid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .header {

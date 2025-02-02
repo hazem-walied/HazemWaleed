@@ -1,19 +1,18 @@
 /* components/CourseCard.module.css */
 .card {
     perspective: 1000px;
-    height: 350px; 
     width: 100%;
+    margin-bottom: 20px; /* Add margin-bottom for spacing */
 }
 
 .cardInner {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 350px;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     cursor: pointer;
 }
-
 .card:hover .cardInner {
     transform: rotateY(180deg);
 }
@@ -21,11 +20,12 @@
 .cardFront, .cardBack {
     position: absolute;
     width: 100%;
-    height: 100%;
+    min-height: 350px; /* Changed to min-height */
     backface-visibility: hidden;
     border-radius: 12px;
     background: rgba(15, 15, 20, 0.9);
     border: 1px solid rgba(96, 165, 250, 0.1);
+    overflow: hidden; /* Prevent overflow */
 }
 
 .cardFront {
@@ -35,7 +35,6 @@
     gap: 15px;
 }
 
-/* Header Section with Logo and Title */
 .headerSection {
     display: flex;
     align-items: center;
@@ -45,8 +44,8 @@
 
 .logoContainer {
     flex-shrink: 0;
-    width: 120px; /* Increased size */
-    height: 120px; /* Increased size */
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,42 +76,20 @@
     color: #6b7280;
 }
 
-
-/* Info Section */
-.infoSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .duration {
     display: flex;
     align-items: center;
     gap: 6px;
     color: #6b7280;
     font-size: 0.9rem;
-    margin-bottom: 8px; 
-    margin-top: -8px;
-}
-.rating {
-    display: flex;
-    gap: 3px;
+    margin-bottom: 8px;
 }
 
-.starFilled {
-    color: #3b82f6;
-}
-
-.starEmpty {
-    color: #1f2937;
-}
-
-/* Skills Container */
 .skillsContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
 }
 
 .skill {
@@ -126,7 +103,6 @@
 .dateSection {
     color: #6b7280;
     font-size: 0.85rem;
-    margin-top: -4px;
 }
 
 /* Back of Card */
@@ -154,11 +130,23 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .card {
-        height: 360px;
-    }
-    
     .title {
         font-size: 1rem;
+    }
+
+    .card {
+        min-height: 400px;
+        margin-bottom: 1rem; /* Increase margin-bottom for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        min-height: 450px;
+        margin-bottom: 0px; /* Further increase margin-bottom for extra small screens */
     }
 }

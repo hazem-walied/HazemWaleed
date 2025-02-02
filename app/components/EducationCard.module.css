@@ -1,11 +1,11 @@
-/* components/EducationCard.module.css */
 .card {
     position: relative;
-    width: 48%;
+    width: 48%; /* Adjusted width */
     margin-bottom: 60px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.5s ease forwards;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .left {
@@ -27,6 +27,7 @@
     padding: 25px;
     transition: transform 0.3s ease;
     width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .cardContent:hover {
@@ -69,6 +70,8 @@
     color: #60a5fa;
     margin-bottom: 8px;
     line-height: 1.3;
+    word-wrap: break-word; /* Ensure long words break */
+    overflow-wrap: break-word; /* Ensure text wraps */
 }
 
 .majorContainer {
@@ -81,6 +84,8 @@
     font-size: 1rem;
     color: #e5e7eb;
     margin: 0;
+    word-wrap: break-word; /* Ensure long words break */
+    overflow-wrap: break-word; /* Ensure text wraps */
 }
 
 /* Details Section */
@@ -88,6 +93,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px; /* Add gap between items */
 }
 
 .detailItem {
@@ -96,6 +103,8 @@
     gap: 6px;
     color: #6b7280;
     font-size: 0.9rem;
+    word-wrap: break-word; /* Ensure long words break */
+    overflow-wrap: break-word; /* Ensure text wraps */
 }
 
 .icon {
@@ -191,27 +200,35 @@
 /* Media Queries */
 @media (max-width: 768px) {
     .card {
-        width: calc(100% - 60px);
-        margin-left: 60px !important;
+        width: 100%; /* Full width on mobile */
+        margin-left: 0 !important;
         padding-left: 0;
         padding-right: 0;
     }
 
+    .cardContent {
+        padding: 20px; /* Reduce padding on mobile */
+    }
+
+    .timelineLine {
+        left: 20px; /* Adjusted for mobile */
+    }
+
     .card::before {
-        left: -40px !important;
+        left: -30px !important; /* Adjusted for mobile */
     }
 
     .card::after {
-        left: -20px !important;
+        left: -20px !important; /* Adjusted for mobile */
         width: 20px;
     }
 
     .details {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Stack details vertically on mobile */
+        gap: 10px; /* Add gap between items */
     }
 
     .institution {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Adjust font size for mobile */
     }
 }
