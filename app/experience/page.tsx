@@ -5,6 +5,23 @@ import Footer from "./../components/Footer";
 
 const experiences = [
     {
+        logo: "/images/4sale.webp",
+        company: "4SALE International co.",
+        role: "AI/ML Engineering Internship",
+        startDate: "July 2025",
+        endDate: "September 2025",
+        location: "Zamalek, Egypt — Hybrid",
+        description: [
+            "International company specializing in e-commerce and digital solutions",
+        ],
+        achievements: [
+            "Designed and implemented machine learning systems for user analytics and engagement tracking.",
+            "Conducted data exploration, cleaning, and feature extraction from warehouse data for predictive scoring.",
+            "Collaborated with DevOps to integrate AI services into production systems.",
+            "Ensured code reliability and scalability using documentation, version control, and performance testing."
+        ]
+    },
+    {
         logo: "/images/fluidai.jpeg",
         company: "Fluid AI Medical",
         role: "Technical Solutions Associate",

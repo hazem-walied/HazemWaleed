@@ -9,7 +9,7 @@ const educationData = [
         logo: "/images/fcai.jpeg",
         institution: "Cairo University",
         major: "Major: Artificial Intelligence",
-        gpa: "3.73/4.0",
+        gpa: "3.77/4.0",
         startDate: "October 2021",
         endDate: "June 2025",
         location: "Dokki, Giza, Egypt.",
